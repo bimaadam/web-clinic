@@ -9,9 +9,8 @@ import {
     Text,
     Stack,
     Icon,
-
 } from '@chakra-ui/react'
-import { IoAnalyticsSharp, IoLogoBitcoin, IoSearchSharp } from 'react-icons/io5'
+import { IoHeart, IoMedical, IoSearchSharp } from 'react-icons/io5'
 import { ReactElement } from 'react'
 import { useColorModeValue } from './ui/color-mode'
 
@@ -34,7 +33,7 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
 
 export default function Features() {
     return (
-        <Container maxW={'5xl'} py={12}>
+        <Container maxW={'7xl'} py={12}>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                 <Stack spacing={4}>
                     <Text
@@ -46,41 +45,41 @@ export default function Features() {
                         p={2}
                         alignSelf={'flex-start'}
                         rounded={'md'}>
-                        Our Story
+                        Misi Kami
                     </Text>
-                    <Heading>A digital Product design agency</Heading>
-                    <Text color={'gray.500'} fontSize={'lg'}>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                        eirmod tempor invidunt ut labore
+                    <Heading color={"black"}>Penyedia layanan kesehatan dan kesejahteraan</Heading>
+                    <Text color={'black'} fontSize={'lg'}>
+                        Kami berdedikasi untuk memberikan standar perawatan tertinggi dan mempromosikan gaya hidup sehat bagi semua orang.
                     </Text>
                     <Stack
+                        color={"black"}
                         spacing={4}
                         divider={
-                            <Stack borderColor={useColorModeValue('gray.100', 'gray.700')} />
+                            <Stack borderColor={useColorModeValue('black', 'black')} />
                         }>
                         <Feature
-                            icon={<Icon as={IoAnalyticsSharp} color={'yellow.500'} w={5} h={5} />}
-                            iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-                            text={'Business Planning'}
+                            icon={<Icon as={IoHeart} color={'red.500'} w={5} h={5} />}
+                            iconBg={useColorModeValue('red.100', 'red.900')}
+                            text={'Perawatan Pasien'}
                         />
                         <Feature
-                            icon={<Icon as={IoLogoBitcoin} color={'green.500'} w={5} h={5} />}
+                            icon={<Icon as={IoMedical} color={'green.500'} w={5} h={5} />}
                             iconBg={useColorModeValue('green.100', 'green.900')}
-                            text={'Financial Planning'}
+                            text={'Layanan Medis'}
                         />
                         <Feature
                             icon={<Icon as={IoSearchSharp} color={'purple.500'} w={5} h={5} />}
                             iconBg={useColorModeValue('purple.100', 'purple.900')}
-                            text={'Market Analysis'}
+                            text={'Riset Kesehatan'}
                         />
                     </Stack>
                 </Stack>
                 <Flex>
                     <Image
                         rounded={'md'}
-                        alt={'feature image'}
+                        alt={'gambar layanan kesehatan'}
                         src={
-                            'https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+                            'https://images.unsplash.com/photo-1574158622684-0a0b75d4cfad?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwzNjUyOXwwfDF8c2VhcmNofDE0fHxoZWFsdGglMjBjYXJlJTIwdG9wZXxlbnwwfDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080'
                         }
                         objectFit={'cover'}
                     />

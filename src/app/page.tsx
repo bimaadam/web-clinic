@@ -5,14 +5,14 @@ import Hero from "@/components/Hero";
 
 const Home = () => {
   return (
-    <VStack spacing={0} align="stretch">
-      <Box width={"auto"} height={"auto"}>
+    <VStack bg="whiteAlpha.900" spacing={0} align="stretch">
+      <Box position={'relative'} height={'full'} width={'full'} overflow={'hidden'}>
         <Geser />
       </Box>
-      <Box>
+      <Box >
         <Hero />
       </Box>
-      <Box>
+      <Box width={"auto"} height={"full"}>
         <Features />
       </Box>
     </VStack>

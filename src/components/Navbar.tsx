@@ -24,7 +24,14 @@ const Navbar = () => {
                     <Link href="#kontak" _hover={{ textDecoration: "underline" }}>
                         Kontak
                     </Link>
-                    <Button bg="green.400">
+                    <Button
+                        bg="green.400"
+                        _hover={{
+                            bg: 'green.500',
+                            boxShadow: 'md',
+                            transform: 'scale(1.05)',
+                            transition: 'all 0.2s ease-in-out'
+                        }}>
                         Daftar Online
                     </Button>
                 </Flex>

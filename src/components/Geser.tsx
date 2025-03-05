@@ -42,24 +42,22 @@ export default function Geser() {
     // This can be static or loaded from a server
     const cards = [
         {
-            title: 'Design Projects 1',
-            text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-            image:
-                'https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+            title: 'Layanan Konsultasi',
+            text: "Klinik kami menawarkan layanan konsultasi lengkap untuk membantu Anda menjaga kesehatan. Jadwalkan janji temu dengan dokter ahli kami.",
+            image: 'url-ke-gambar-layanan-konsultasi.jpg',
         },
         {
-            title: 'Design Projects 2',
-            text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-            image:
-                'https://images.unsplash.com/photo-1438183972690-6d4658e3290e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2274&q=80',
+            title: 'Pemeriksaan Kesehatan',
+            text: "Lakukan pemeriksaan kesehatan menyeluruh untuk memastikan kondisi tubuh Anda tetap prima. Klinik kami menyediakan pemeriksaan rutin yang disesuaikan dengan kebutuhan Anda.",
+            image: 'url-ke-gambar-pemeriksaan-kesehatan.jpg',
         },
         {
-            title: 'Design Projects 3',
-            text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-            image:
-                'https://images.unsplash.com/photo-1507237998874-b4d52d1dd655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+            title: 'Layanan Gawat Darurat',
+            text: "Klinik kami menyediakan layanan medis gawat darurat 24/7 untuk menangani masalah kesehatan mendesak. Kesehatan Anda adalah prioritas kami.",
+            image: 'url-ke-gambar-layanan-gawat-darurat.jpg',
         },
-    ]
+    ];
+
 
     return (
         <Box position={'relative'} height={'600px'} width={'full'} overflow={'hidden'}>
@@ -112,6 +110,7 @@ export default function Geser() {
                         {/* This is the block you need to change, to customize the caption */}
                         <Container size="container.lg" height="600px" position="relative">
                             <Stack
+                                color={"blackAlpha.700"}
                                 spacing={6}
                                 w={'full'}
                                 maxW={'lg'}
@@ -121,7 +120,7 @@ export default function Geser() {
                                 <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
                                     {card.title}
                                 </Heading>
-                                <Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
+                                <Text fontSize={{ base: 'md', lg: 'lg' }} color="black">
                                     {card.text}
                                 </Text>
                             </Stack>
