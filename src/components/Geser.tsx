@@ -44,23 +44,23 @@ export default function Geser() {
         {
             title: 'Layanan Konsultasi',
             text: "Klinik kami menawarkan layanan konsultasi lengkap untuk membantu Anda menjaga kesehatan. Jadwalkan janji temu dengan dokter ahli kami.",
-            image: 'url-ke-gambar-layanan-konsultasi.jpg',
+            image: '1.jpg',
         },
         {
             title: 'Pemeriksaan Kesehatan',
             text: "Lakukan pemeriksaan kesehatan menyeluruh untuk memastikan kondisi tubuh Anda tetap prima. Klinik kami menyediakan pemeriksaan rutin yang disesuaikan dengan kebutuhan Anda.",
-            image: 'url-ke-gambar-pemeriksaan-kesehatan.jpg',
+            image: '2.jpg',
         },
         {
             title: 'Layanan Gawat Darurat',
             text: "Klinik kami menyediakan layanan medis gawat darurat 24/7 untuk menangani masalah kesehatan mendesak. Kesehatan Anda adalah prioritas kami.",
-            image: 'url-ke-gambar-layanan-gawat-darurat.jpg',
+            image: '3.jpg',
         },
     ];
 
 
     return (
-        <Box position={'relative'} height={'600px'} width={'full'} overflow={'hidden'}>
+        <Box maxW={"max-content"} position={'relative'} height={'850px'} width={'auto'} overflow={'hidden'}>
             {/* CSS files for react-slick */}
             <link
                 rel="stylesheet"
@@ -81,6 +81,7 @@ export default function Geser() {
                 top={top}
                 transform={'translate(0%, -50%)'}
                 zIndex={2}
+                color={"black"}
                 onClick={() => slider?.slickPrev()}>
                 <BiLeftArrowAlt size="40px" />
             </IconButton>
@@ -91,6 +92,7 @@ export default function Geser() {
                 position="absolute"
                 right={side}
                 top={top}
+                color={"black"}
                 transform={'translate(0%, -50%)'}
                 zIndex={2}
                 onClick={() => slider?.slickNext()}>
@@ -101,7 +103,7 @@ export default function Geser() {
                 {cards.map((card, index) => (
                     <Box
                         key={index}
-                        height={'6xl'}
+                        height={'4xl'}
                         position="relative"
                         backgroundPosition="center"
                         backgroundRepeat="no-repeat"
@@ -110,17 +112,17 @@ export default function Geser() {
                         {/* This is the block you need to change, to customize the caption */}
                         <Container size="container.lg" height="600px" position="relative">
                             <Stack
-                                color={"blackAlpha.700"}
+                                color={"white"}
                                 spacing={6}
                                 w={'full'}
                                 maxW={'lg'}
                                 position="absolute"
                                 top="50%"
                                 transform="translate(0, -50%)">
-                                <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+                                <Heading backgroundColor={'blackAlpha.700'} padding={'5'} fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
                                     {card.title}
                                 </Heading>
-                                <Text fontSize={{ base: 'md', lg: 'lg' }} color="black">
+                                <Text padding={'4'} backgroundColor={'blackAlpha.400'} fontSize={{ base: 'md', lg: 'lg' }} color="white">
                                     {card.text}
                                 </Text>
                             </Stack>

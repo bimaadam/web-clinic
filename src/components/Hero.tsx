@@ -61,16 +61,16 @@ export default function Hero() {
                             colorScheme={'green'}
                             bg={'green.400'}
                             _hover={{ bg: 'green.500' }}>
-                            Pelajari Lebih Lanjut
+                            Daftar Online
                         </Button>
-                        <Button
+                        {/* <Button
                             rounded={'full'}
                             size={'lg'}
                             fontWeight={'normal'}
                             px={6}
                         >
-                            Cara Kerja
-                        </Button>
+                            Cara daftar
+                        </Button> */}
                     </Stack>
                 </Stack>
                 <Flex

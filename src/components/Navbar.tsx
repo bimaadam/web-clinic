@@ -8,13 +8,14 @@ const Navbar = () => {
             <Flex align="center" maxW="1200px" mx="auto">
                 <Link href="/" fontSize="xl" fontWeight="bold">
                     <HStack>
-
                         <Image src="/logo-klinik.png" alt="Logo" width="50px" height="50px" shadowColor={"green.200"} />
                         <Text fontSize="medium" fontWeight="bold">Klinik Setia Medika</Text>
                     </HStack>
                 </Link>
                 <Spacer />
                 <Flex gap={4}>
+                    <Link href="/" _hover={{ textDecoration: "underline" }}>
+                        Home</Link>
                     <Link href="#layanan" _hover={{ textDecoration: "underline" }}>
                         Layanan
                     </Link>
@@ -23,6 +24,9 @@ const Navbar = () => {
                     </Link>
                     <Link href="#kontak" _hover={{ textDecoration: "underline" }}>
                         Kontak
+                    </Link>
+                    <Link href="/blog" _hover={{ textDecoration: "underline" }}>
+                        Blog
                     </Link>
                     <Button
                         bg="green.400"
