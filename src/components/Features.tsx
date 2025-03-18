@@ -62,13 +62,7 @@ export default function Features() {
             Kami berdedikasi untuk memberikan standar perawatan tertinggi dan
             mempromosikan gaya hidup sehat bagi semua orang.
           </Text>
-          <Stack
-            color={"black"}
-            gap={4}
-            divideY={
-              <Stack borderColor={useColorModeValue("black", "black")} />
-            }
-          >
+          <Stack color={"black"} gap={4} divideY="2px">
             <Feature
               icon={<Icon as={IoHeart} color={"red.500"} w={5} h={5} />}
               iconBg={useColorModeValue("red.100", "red.900")}

@@ -112,7 +112,7 @@ export default function Geser() {
             backgroundBlendMode={"multiply"}
             backgroundImage={`url(${item.image})`}
           >
-            <Container size="container.lg" height="600px" position="relative">
+            <Container maxW="container.lg" height="600px" position="relative">
               <Stack
                 color={"white"}
                 gap={6}
