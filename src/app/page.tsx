@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 
 const Home = () => {
   return (
-    <VStack bg="whiteAlpha.900" spacing={0} align="stretch">
+    <VStack bg="whiteAlpha.900" gap={0} align="stretch">
       <Box
         position={"relative"}
         height={"full"}
