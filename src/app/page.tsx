@@ -3,15 +3,22 @@ import Features from "@/components/Features";
 import Geser from "@/components/Geser";
 import Hero from "@/components/Hero";
 import Layanan from "@/components/Layanan";
-import Jadwal from "@/components/Jadwal";
+import JadwalPelayanan from "@/components/Jadwal";
+import KritikSaran from "@/components/KritikSaran";
+import Footer from "@/components/Footer";
 
 const Home = () => {
   return (
     <VStack bg="whiteAlpha.900" spacing={0} align="stretch">
-      <Box position={'relative'} height={'full'} width={'full'} overflow={'hidden'}>
+      <Box
+        position={"relative"}
+        height={"full"}
+        width={"full"}
+        overflow={"hidden"}
+      >
         <Geser />
       </Box>
-      <Box >
+      <Box>
         <Hero />
       </Box>
       <Box width={"auto"} height={"full"}>
@@ -21,8 +28,12 @@ const Home = () => {
         <Layanan />
       </Box>
       <Box width={"auto"} height={"full"}>
-        <Jadwal />
+        <JadwalPelayanan />
       </Box>
+      <Box>
+        <KritikSaran />
+      </Box>
+      <Footer />
     </VStack>
   );
 };

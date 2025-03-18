@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import {
     Box,
     IconButton,
@@ -10,12 +10,9 @@ import {
     Text,
     Container,
 } from '@chakra-ui/react'
-// Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi'
-// And react-slick as our Carousel Lib
 import Slider from 'react-slick'
 
-// Settings for the slider
 const settings = {
     dots: true,
     arrows: false,
@@ -29,17 +26,19 @@ const settings = {
 }
 
 export default function Geser() {
-    // As we have used custom buttons, we need a reference variable to
-    // change the state
-    const [slider, setSlider] = React.useState<Slider | null>(null)
+    const [slider, setSlider] = useState<Slider | null>(null) // React udah dideclare otomatis
 
-    // These are the breakpoints which changes the position of the
-    // buttons as the screen size changes
     const top = useBreakpointValue({ base: '90%', md: '50%' })
     const side = useBreakpointValue({ base: '30%', md: '40px' })
 
-    // This list contains all the data for carousels
-    // This can be static or loaded from a server
+    const Igd = [
+        {
+            title: 'Layanan Gawat Darurat',
+            text: "Klinik kami menyediakan layanan medis gawat darurat 24/7 untuk menangani masalah kesehatan mendesak. Kesehatan Anda adalah prioritas kami.",
+            image: '3.jpg',
+        },
+    ]
+
     const cards = [
         {
             title: 'Layanan Konsultasi',
@@ -51,17 +50,11 @@ export default function Geser() {
             text: "Lakukan pemeriksaan kesehatan menyeluruh untuk memastikan kondisi tubuh Anda tetap prima. Klinik kami menyediakan pemeriksaan rutin yang disesuaikan dengan kebutuhan Anda.",
             image: '2.jpg',
         },
-        {
-            title: 'Layanan Gawat Darurat',
-            text: "Klinik kami menyediakan layanan medis gawat darurat 24/7 untuk menangani masalah kesehatan mendesak. Kesehatan Anda adalah prioritas kami.",
-            image: '3.jpg',
-        },
     ];
-
 
     return (
         <Box maxW={"max-content"} position={'relative'} height={'850px'} width={'auto'} overflow={'hidden'}>
-            {/* CSS files for react-slick */}
+            {/* Tambahin CSS buat Slider */}
             <link
                 rel="stylesheet"
                 type="text/css"
@@ -72,7 +65,7 @@ export default function Geser() {
                 type="text/css"
                 href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
             />
-            {/* Left Icon */}
+            {/* Tombol Navigasi */}
             <IconButton
                 aria-label="left-arrow"
                 variant="ghost"
@@ -85,7 +78,6 @@ export default function Geser() {
                 onClick={() => slider?.slickPrev()}>
                 <BiLeftArrowAlt size="40px" />
             </IconButton>
-            {/* Right Icon */}
             <IconButton
                 aria-label="right-arrow"
                 variant="ghost"
@@ -99,8 +91,8 @@ export default function Geser() {
                 <BiRightArrowAlt size="40px" />
             </IconButton>
             {/* Slider */}
-            <Slider {...settings} ref={(slider) => setSlider(slider)}>
-                {cards.map((card, index) => (
+            <Slider {...settings} ref={(s) => setSlider(s)}>
+                {Igd.concat(cards).map((item, index) => (
                     <Box
                         key={index}
                         height={'4xl'}
@@ -108,8 +100,9 @@ export default function Geser() {
                         backgroundPosition="center"
                         backgroundRepeat="no-repeat"
                         backgroundSize="cover"
-                        backgroundImage={`url(${card.image})`}>
-                        {/* This is the block you need to change, to customize the caption */}
+                        backgroundColor={'blackAlpha.500'}
+                        backgroundBlendMode={'multiply'}
+                        backgroundImage={`url(${item.image})`}>
                         <Container size="container.lg" height="600px" position="relative">
                             <Stack
                                 color={"white"}
@@ -119,11 +112,20 @@ export default function Geser() {
                                 position="absolute"
                                 top="50%"
                                 transform="translate(0, -50%)">
-                                <Heading backgroundColor={'blackAlpha.700'} padding={'5'} fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
-                                    {card.title}
+                                <Heading
+                                    backgroundColor={Igd.some(igdItem => igdItem.title === item.title) ? 'red.700' : 'blue.900'}
+                                    rounded={'2xl'}
+                                    padding={'5'}
+                                    fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+                                    {item.title}
                                 </Heading>
-                                <Text padding={'4'} backgroundColor={'blackAlpha.400'} fontSize={{ base: 'md', lg: 'lg' }} color="white">
-                                    {card.text}
+                                <Text
+                                    padding={'4'}
+                                    backgroundColor={'blackAlpha.400'}
+                                    rounded={'2xl'}
+                                    fontSize={{ base: 'md', lg: 'lg' }}
+                                    color="white">
+                                    {item.text}
                                 </Text>
                             </Stack>
                         </Container>
