@@ -16,14 +16,14 @@ export default function Hero() {
     <Container maxW={"7xl"} px={{ base: 4, md: 8 }}>
       <Stack
         align={"center"}
-        spacing={{ base: 6, md: 10 }}
+        gap={{ base: 6, md: 10 }}
         py={{ base: 16, md: 24 }}
         direction={{ base: "column", md: "row" }}
       >
         {/* Teks Section */}
         <Stack
           flex={1}
-          spacing={{ base: 4, md: 6 }}
+          gap={{ base: 4, md: 6 }}
           textAlign={{ base: "center", md: "left" }}
         >
           <Heading
@@ -46,7 +46,7 @@ export default function Hero() {
             bagi Anda dan keluarga.
           </Text>
           <Stack
-            spacing={4}
+            gap={4}
             direction={{ base: "column", sm: "row" }}
             justify={{ base: "center", md: "flex-start" }}
           >

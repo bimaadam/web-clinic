@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <Box bg="blue.700" color="white" py={6}>
       <Container maxW="7xl">
-        <Stack spacing={4} textAlign="center">
+        <Stack gap={4} textAlign="center">
           <Text fontSize="lg" fontWeight="bold">
             Klinik Setia Medika
           </Text>

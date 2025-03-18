@@ -37,7 +37,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <HStack spacing={4} display={{ base: "none", md: "flex" }}>
+        <HStack gap={4} display={{ base: "none", md: "flex" }}>
           <Link href="/" _hover={{ textDecoration: "underline" }}>
             Home
           </Link>
@@ -83,7 +83,7 @@ const Navbar = () => {
       {isOpen && (
         <VStack
           bg="blue.800"
-          spacing={4}
+          gap={4}
           p={4}
           display={{ base: "flex", md: "none" }}
           align="stretch"

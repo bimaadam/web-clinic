@@ -21,7 +21,7 @@ export default function KritikSaran() {
 
   return (
     <Box p={4} borderWidth={1} borderRadius="md">
-      <VStack spacing={4}>
+      <VStack gap={4}>
         <Textarea
           color={"black"}
           placeholder="Tulis kritik Anda"
