@@ -1,16 +1,17 @@
 "use client";
 
-import { 
-  Box, 
-  Container, 
-  Stack, 
-  Text, 
-  VStack, 
-  HStack, 
+import {
+  Box,
+  Container,
+  Stack,
+  Text,
+  VStack,
+  HStack,
   SimpleGrid,
   Heading,
   Link,
-  Button
+  Button,
+  Image
 } from "@chakra-ui/react";
 
 export default function Footer() {
@@ -22,14 +23,19 @@ export default function Footer() {
           {/* Informasi Klinik */}
           <VStack align="flex-start" gap={4}>
             <HStack>
-              <Text fontSize="2xl">🩺</Text>
+              <Image
+                src="/klinik.jpg"
+                alt="Logo Klinik"
+                boxSize="200px"
+                objectFit="contain"
+              />
               <Heading fontSize="xl" color="blue.400">
-                Klinik Setia Medika
+
               </Heading>
             </HStack>
             <Text fontSize="sm" color="gray.300" lineHeight={1.6}>
-              Melayani masyarakat Panumbangan, Ciamis dengan layanan kesehatan 
-              berkualitas tinggi sejak 2020. Komitmen kami adalah kesehatan 
+              Melayani masyarakat Panumbangan, Ciamis dengan layanan kesehatan
+              berkualitas tinggi sejak 2020. Komitmen kami adalah kesehatan
               optimal untuk keluarga Anda.
             </Text>
             <HStack gap={3}>
@@ -88,15 +94,25 @@ export default function Footer() {
               </HStack>
               <HStack gap={3}>
                 <Text color="green.400" fontSize="lg">📞</Text>
-                <Text fontSize="sm" color="gray.300">
-                  +62 xxx xxxx xxxx
-                </Text>
+                <Link
+                  href="https://wa.me/628522466627"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Text fontSize="sm" color="gray.300">
+                    +62 852 246 6627
+                  </Text>
+                </Link>
               </HStack>
               <HStack gap={3}>
                 <Text color="blue.400" fontSize="lg">✉️</Text>
-                <Text fontSize="sm" color="gray.300">
-                  info@kliniksetiamedika.com
-                </Text>
+                <Link
+                  href="mailto:klinikpratamasetiamedika@gmail.com"
+                  fontSize="sm"
+                  color="gray.300"
+                >
+                  klinikpratamasetiamedika@gmail.com
+                </Link>
               </HStack>
               <HStack gap={3}>
                 <Text color="orange.400" fontSize="lg">🕐</Text>
@@ -114,7 +130,7 @@ export default function Footer() {
               Darurat?
             </Heading>
             <Text fontSize="sm" color="gray.300" lineHeight={1.6}>
-              Kami siap melayani kondisi darurat 24 jam. 
+              Kami siap melayani kondisi darurat 24 jam.
               Jangan ragu untuk menghubungi kami kapan saja.
             </Text>
             <VStack gap={2} w="full">
@@ -154,7 +170,7 @@ export default function Footer() {
           <HStack>
             <Text color="red.400" fontSize="lg">❤️</Text>
             <Text fontSize="sm" color="gray.400">
-              &copy; {new Date().getFullYear()} Klinik Setia Medika. 
+              &copy; {new Date().getFullYear()} Klinik Setia Medika.
               Melayani dengan sepenuh hati.
             </Text>
           </HStack>

@@ -1,5 +1,5 @@
 import { Container, VStack, Text, Box, HStack } from "@chakra-ui/react";
-import { FaClock, FaCalendarTimes } from "react-icons/fa";
+import { FaClock } from "react-icons/fa";
 import React from "react";
 
 const JadwalPelayanan = () => {
@@ -19,39 +19,42 @@ const JadwalPelayanan = () => {
           <HStack>
             <FaClock size={24} color="green" />
             <Text color={"black"} fontSize={"2xl"} fontWeight={"semibold"}>
-              Layanan 24 Jam
+              Persalinan 24 Jam
             </Text>
           </HStack>
           <Text color={"gray.700"}>
-            Pelayanan medis tersedia setiap hari tanpa henti.
+            Layanan persalinan tersedia 24 jam untuk BPJS / UMUM / KIS.
           </Text>
         </Box>
+
         <Box bg="blue.100" p={5} borderRadius="md">
           <HStack>
             <FaClock size={24} color="blue" />
             <Text color={"black"} fontSize={"2xl"} fontWeight={"semibold"}>
-              Jadwal Pagi
+              Senin - Sabtu
             </Text>
           </HStack>
-          <Text color={"gray.700"}>08.00 - 12.00 (Setiap Hari)</Text>
+          <Text color={"gray.700"}>06.00 – 20.00</Text>
         </Box>
+
         <Box bg="purple.100" p={5} borderRadius="md">
           <HStack>
             <FaClock size={24} color="purple" />
             <Text color={"black"} fontSize={"2xl"} fontWeight={"semibold"}>
-              Jadwal Sore
+              Minggu Pagi
             </Text>
           </HStack>
-          <Text color={"gray.700"}>15.00 - 19.00 (Setiap Hari)</Text>
+          <Text color={"gray.700"}>06.00 – 09.00</Text>
         </Box>
+
         <Box bg="orange.100" p={5} borderRadius="md">
           <HStack>
             <FaClock size={24} color="orange" />
             <Text color={"black"} fontSize={"2xl"} fontWeight={"semibold"}>
-              Jadwal Malam
+              Minggu Sore
             </Text>
           </HStack>
-          <Text color={"gray.700"}>19.30 - 22.00 (Setiap Hari)</Text>
+          <Text color={"gray.700"}>16.00 – 20.00</Text>
         </Box>
       </VStack>
     </Container>
